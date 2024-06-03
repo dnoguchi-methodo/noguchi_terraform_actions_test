@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "methodologic-prj-istyle-dev",
+  "private_key_id": "dd842d45dcb0b72835553f6654edd5505afb00b6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDSwnZwcn4xl9Oi\nRakY43J+qQNw2J+9nRKCJMRE0DWsOrfExBCiTFCIM9g7okFr11O2SsDXyMDY8qr6\ny3xC2Heo4IOJZ1euviu5T5DWMbykELdsGjR1PDXLZEkwazedw3eVPgydjwL6UlYm\ngGYAVhdQwnfmKdcgZvRL2GzW7zwcA4BW7u6UEFpGZpvhUa86iVZiF60H3agOZOlE\nRCyj9jl5Tx7YrmqysJUpN7dZvbe4HFGlRXun9IlVEj9fTu67770eDg9Q2/atojNr\nL9sBAHjtcUWe3NMP4ZCbwaaEhyfMyALqScSeAUkys6MpdzHlP6S+aU+aSzqGv8if\nvsK5mQfBAgMBAAECggEADfT6yu+KE9auGSzryc4mIuUmaS6vRWtFcoDkznnLVCB/\nUvR49YaAPsTQKQLRukaEMKo6ow+UVcmcMQeQrwyOwAw+KbdCQzwswRTXzpd0mpjQ\nzMPffXQDS/jUL/SptjTfkm6Nf1GdLN6O/fW6y4LoAF0ge4mByY+H1g37BzDIlkI2\nU8rZrAw9UNkfszXBc5yz+gHO1pVtNYjq9pIlQxkJHYPL075yvRcfiem7Zo2uty49\n7hqme9h1p0pG+d8F1b3wHhps9qRzJ59Xa91+9xzNtOuGwL0pAYmci03bLC+QjzkR\n7YUKlbwy/VMHgqHtVzrfMcGGlqLXUawxBF9EErKrAQKBgQDtiowJY1WebN2VzOR0\nKbCdBud9S9VQ/NuFjYIAM9M6iDsxjOk6ddEJvHvjTokT6Ng3ITfZCtaZbZTd7xBZ\n6y5ODCU6CHvnY06nxAClFLZn9WsspQg5IKsvOn3LJAwIc8WnD+ADEEScgI/rdGcO\ncsDjAY82s8Qh1GGSTL5HfuHAqQKBgQDjIyT9yykTUjHthZgiNf+t3vnei+JdgBG8\ndZKFyaj/+JMFoBqwnnHLEZWHG+TQ0vwTLl8AX1ycKJ1V3lAO/VzPzgsZpMg9xGYB\nb67s+u54rs7n4j26zrvNY3uhNssQUZlLp/tT6VrzY6/RzJKeEfsxTXGNrv8TtiwI\nhIiYXuPFWQKBgA2qHKglmLVGWfDWGoY8J7bAwOxKQnkoMpCaNVJBqPMDBzSwgHIm\neOHwf8fxqp0ElfuF46qOnw2wahHiQLSLfNxsgm+2MTp8UfgApHDaoiuUyJeG3tQ6\ndt5+pOHcrvyFfGdB2IcUln3SP3Ux+wOvwjzMyCpDaRLxHrPFymRefioRAoGBAKNF\nDwET+Wm3Csam4k2tLSXJgylSuhvlxFoI1ZMv+zhMcTp49NaCfl+vOyHMjjUBhEsx\naP62jbZ+h2JDFJ9BxmZlwJrlVT75Hy3nHwGf+q1rUrVibmcK1fp0iVjAL0WCskOs\n8z9FHaiYvrh7aeUQHdU5yudCpH6B07MnuZx1kRq5AoGARIR3aE0cQsIJLC0bsbw2\nAaQMPdmL1v3L8SMTjgRJuRRZEOSpc3xnqOhGk0erj22o7lwjulrXPD/39ZWyYyLn\nbvJ4iwt99n74UTu58r0mBHVPOampdxMqtSSuS95eC1adOiTmR1N9JoXQEE3z40jq\nd/vHnDPfPgauvBZ46bOgO+Y=\n-----END PRIVATE KEY-----\n",
+  "client_email": "terraform-build@methodologic-prj-istyle-dev.iam.gserviceaccount.com",
+  "client_id": "105061994480010508863",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/terraform-build%40methodologic-prj-istyle-dev.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
