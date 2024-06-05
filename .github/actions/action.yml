@@ -1,8 +1,8 @@
 name: "Composite Action"
 description: "Composite Action"
 inputs:
-  AWS_ENVIRONMENT:
-    description: "AWS_ENVIRONMENT"
+  ENVIRONMENT:
+    description: "GCPのENVIRONMENT"
     required: true
 
 runs:
@@ -32,7 +32,7 @@ runs:
       id: plan
       run: terraform plan -no-color
       continue-on-error: true
-      
+
     - name: Terraform Plan Status
       shell: bash
       if: steps.plan.outcome == 'failure'
