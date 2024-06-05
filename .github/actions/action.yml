@@ -8,14 +8,6 @@ inputs:
 runs:
   using: "composite"
   steps:     # https://cloud.google.com/iam/docs/using-workload-identity-federation#generate-automatic
-    - uses: actions/checkout@v3
-    - id: 'auth'
-      name: 'Authenticate to Google Cloud'
-      uses: 'google-github-actions/auth@v1'
-      with:
-        workload_identity_provider: 'projects/603621274592/locations/global/workloadIdentityPools/mypool/providers/myprovider'
-        service_account: 'tf-exec@myproject.iam.gserviceaccount.com'
-
     # https://github.com/hashicorp/setup-terraform
     - uses: hashicorp/setup-terraform@v2
 
