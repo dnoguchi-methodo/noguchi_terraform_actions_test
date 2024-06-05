@@ -1,0 +1,49 @@
+{
+    "members": [
+        {
+            "role": "roles/bigquery.jobUser",
+            "member": "user:d.noguchi@methodologic.co.jp",
+            "condition": {
+                "title": "",
+                "description": "",
+                "expression": ""
+            }
+        },
+        {
+            "role": "roles/bigquery.admin",
+            "member": "user:d.noguchi@methodologic.co.jp",
+            "condition": {
+                "title": "tag",
+                "description": "",
+                "expression": "resource.matchTag('tag', 'methodologic-prj-istyle-prd/tag_domain/retail') || resource.matchTag('tag', 'methodologic-prj-istyle-prd/tag_domain/dataset')"
+            }
+        },
+        {
+            "role": "roles/resourcemanager.projectIamAdmin",
+            "member": "user:d.noguchi@methodologic.co.jp",
+            "condition": {
+                "title": "",
+                "description": "",
+                "expression": ""
+            }
+        },
+        {
+            "role": "roles/storage.admin",
+            "member": "user:d.noguchi@methodologic.co.jp",
+            "condition": {
+                "title": "Bucket name",
+                "description": "",
+                "expression": "resource.name == 'projects/_/buckets/method-istyle-retail-sample1' || resource.name.startsWith('projects/_/buckets/method-istyle-retail-sample1/objects/')"
+            }
+        },
+        {
+            "role": "roles/resourcemanager.tagViewer",
+            "member": "user:d.noguchi@methodologic.co.jp",
+            "condition": {
+                "title": "",
+                "description": "",
+                "expression": ""
+            }
+        }
+    ]
+}
