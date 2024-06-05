@@ -2,6 +2,7 @@ name: terraform
   
 # main ブランチへのPull Request と Merge をトリガーに指定
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
