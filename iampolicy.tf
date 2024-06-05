@@ -1,6 +1,6 @@
 # JSONファイルを読み込み
 locals {
-  iam_members = jsondecode(file("${path.module}/iam_members.json"))
+  iam_members = jsondecode(file("${path.module}/UAT_iam_members.json"))
 }
 
 # IAMポリシーをループで設定
