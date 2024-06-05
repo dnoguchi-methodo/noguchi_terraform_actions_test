@@ -13,6 +13,8 @@ runs:
 
     - name: Terraform fmt
       shell: bash
+       run: |
+          pwd
       id: fmt
       run: terraform fmt -check -recursive
       continue-on-error: true
