@@ -11,10 +11,12 @@ runs:
     # https://github.com/hashicorp/setup-terraform
     - uses: hashicorp/setup-terraform@v2
 
+      - name: step
+        run: |
+          pwd
+
     - name: Terraform fmt
       shell: bash
-       run: |
-          pwd
       id: fmt
       run: terraform fmt -check -recursive
       continue-on-error: true
