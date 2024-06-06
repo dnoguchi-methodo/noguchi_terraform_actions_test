@@ -15,7 +15,7 @@ runs:
       shell: bash
       id: fmt
       run: |
-        cd ${{ WORKING_DIRECTORY }}
+        cd ${{ inputs.WORKING_DIRECTORY }}
         pwd
         terraform fmt -check -recursive
       continue-on-error: true
