@@ -11,9 +11,10 @@ runs:
     # https://github.com/hashicorp/setup-terraform
     - uses: hashicorp/setup-terraform@v2
 
-      - name: step
-        run: |
-          pwd
+    - name: step
+      shell: bash
+      run: |
+        pwd
 
     - name: Terraform fmt
       shell: bash
