@@ -1,8 +1,8 @@
 name: "Composite Action"
 description: "Composite Action"
 inputs:
-  ENVIRONMENT:
-    description: "GCPのENVIRONMENT"
+  WORKING_DIRECTORY:
+    description: "環境ごとの作業ディレクトリ"
     required: true
 
 runs:
@@ -11,17 +11,13 @@ runs:
     # https://github.com/hashicorp/setup-terraform
     - uses: hashicorp/setup-terraform@v2
 
-    - name: step
-      shell: bash
-      run: |
-        pwd
-        cd dev
-        pwd
-
     - name: Terraform fmt
       shell: bash
       id: fmt
-      run: terraform fmt -check -recursive
+      run: |
+        cd ${{ WORKING_DIRECTORY }}
+        pwd
+        terraform fmt -check -recursive
       continue-on-error: true
 
     - name: Terraform Init
