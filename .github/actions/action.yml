@@ -22,18 +22,27 @@ runs:
 
     - name: Terraform Init
       shell: bash
-      id: init
+      id:  |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        init
       run: terraform init
 
     - name: Terraform Validate
       shell: bash
       id: validate
-      run: terraform validate -no-color
+      run:  |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        terraform validate -no-color
 
     - name: Terraform Plan
       shell: bash
       id: plan
-      run: terraform plan -no-color
+      run:  |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        terraform plan -no-color
       continue-on-error: true
 
     - name: Terraform Plan Status
@@ -45,4 +54,7 @@ runs:
     - name: Terraform Apply
       shell: bash
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: terraform apply -auto-approve -input=false
+      run:  |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        terraform apply -auto-approve -input=false
