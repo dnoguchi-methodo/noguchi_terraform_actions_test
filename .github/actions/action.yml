@@ -16,7 +16,6 @@ runs:
       id: fmt
       run: |
         cd ${{ inputs.WORKING_DIRECTORY }}
-        pwd
         terraform fmt -check -recursive
       continue-on-error: true
 
@@ -25,7 +24,6 @@ runs:
       id: init
       run: |
         cd ${{ inputs.WORKING_DIRECTORY }}
-        pwd
         terraform init
 
     - name: Terraform Validate
@@ -33,7 +31,6 @@ runs:
       id: validate
       run:  |
         cd ${{ inputs.WORKING_DIRECTORY }}
-        pwd
         terraform validate -no-color
 
     - name: Terraform Plan
@@ -41,7 +38,6 @@ runs:
       id: plan
       run:  |
         cd ${{ inputs.WORKING_DIRECTORY }}
-        pwd
         terraform plan -no-color
       continue-on-error: true
 
@@ -56,5 +52,4 @@ runs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run:  |
         cd ${{ inputs.WORKING_DIRECTORY }}
-        pwd
         terraform apply -auto-approve -input=false
