@@ -22,11 +22,11 @@ runs:
 
     - name: Terraform Init
       shell: bash
-      id:  |
+      id: init
+      run: |
         cd ${{ inputs.WORKING_DIRECTORY }}
         pwd
-        init
-      run: terraform init
+        terraform init
 
     - name: Terraform Validate
       shell: bash
