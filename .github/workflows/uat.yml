@@ -34,4 +34,4 @@ jobs:
       - name: "call composite"
         uses: ./.github/actions
         with:
-          ENVIRONMENT: uat
+          WORKING_DIRECTORY: uat

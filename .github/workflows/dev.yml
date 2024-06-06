@@ -2,21 +2,19 @@ name: terraform
   
 # main ブランチへのPull Request と Merge をトリガーに指定
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
   pull_request:
-  
-# 作業ディレクトリの指定
-defaults:
-  run:
-    working-directory: ./dev
-  
+    
 # ジョブ / ステップ / アクションの定義
 jobs:
   terraform-workflow:
     runs-on: ubuntu-latest
+    # 作業ディレクトリの指定
+    defaults:
+      run:
+        working-directory: ./dev
     permissions:
       id-token: write
       contents: read
@@ -35,4 +33,4 @@ jobs:
       - name: "call composite"
         uses: ./.github/actions
         with:
-          ENVIRONMENT: dev
+          WORKING_DIRECTORY: dev

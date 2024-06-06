@@ -1,8 +1,8 @@
 name: "Composite Action"
 description: "Composite Action"
 inputs:
-  ENVIRONMENT:
-    description: "GCPのENVIRONMENT"
+  WORKING_DIRECTORY:
+    description: "環境ごとの作業ディレクトリ"
     required: true
 
 runs:
@@ -14,23 +14,35 @@ runs:
     - name: Terraform fmt
       shell: bash
       id: fmt
-      run: terraform fmt -check -recursive
+      run: |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        terraform fmt -check -recursive
       continue-on-error: true
 
     - name: Terraform Init
       shell: bash
       id: init
-      run: terraform init
+      run: |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        terraform init
 
     - name: Terraform Validate
       shell: bash
       id: validate
-      run: terraform validate -no-color
+      run:  |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        terraform validate -no-color
 
     - name: Terraform Plan
       shell: bash
       id: plan
-      run: terraform plan -no-color
+      run:  |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        terraform plan -no-color
       continue-on-error: true
 
     - name: Terraform Plan Status
@@ -42,4 +54,7 @@ runs:
     - name: Terraform Apply
       shell: bash
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: terraform apply -auto-approve -input=false
+      run:  |
+        cd ${{ inputs.WORKING_DIRECTORY }}
+        pwd
+        terraform apply -auto-approve -input=false
